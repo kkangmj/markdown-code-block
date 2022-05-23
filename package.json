@@ -1,0 +1,209 @@
+{
+  "name": "vscode-markdown-extension",
+  "displayName": "Markdown Code Block",
+  "description": "No more backticks for code block.",
+  "version": "0.0.1",
+  "publisher": "kkangmj",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "markdown",
+    "code block"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkangmj/markdown-code-block"
+  },
+  "license": "Apache-2.0",
+  "activationEvents": [
+    "onLanguage:markdown",
+    "workspaceContains:README.md"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdown.extension.codeBlock.emptyLine",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate empty line code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.empty",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate empty code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.python",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate python code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.javascript",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate javascript code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.java",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate java code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.c",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate c code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.c++",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate c++ code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.c#",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate c# code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.r",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate r code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.ruby",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate ruby code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.kotlin",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate kotlin code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.swift",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate swift code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.sql",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate sql code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.postgreSQL",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate postgreSQL code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.bash",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate bash code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.powershell",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate powershell code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.gradle",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate gradle code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.yaml",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate yaml code block",
+        "category": "Markdown Code Block"
+      },
+      {
+        "command": "markdown.extension.codeBlock.xml",
+        "enablement": "editorLangId == markdown",
+        "title": "Generate xml code block",
+        "category": "Markdown Code Block"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "markdown.extension.codeBlock.emptyLine",
+        "key": "alt+'",
+        "when": "editorTextFocus&& !editorReadonly &&editorLangId == markdown"
+      },
+      {
+        "command": "markdown.extension.codeBlock.python",
+        "key": "alt+p",
+        "when": "editorTextFocus&& !editorReadonly && editorLangId == markdown"
+      },
+      {
+        "command": "markdown.extension.codeBlock.javascript",
+        "key": "alt+j",
+        "when": "editorTextFocus&& !editorReadonly && editorLangId == markdown"
+      },
+      {
+        "command": "markdown.extension.codeBlock.java",
+        "key": "ctrl+alt+j",
+        "when": "editorTextFocus&& !editorReadonly && editorLangId == markdown"
+      },
+      {
+        "command": "markdown.extension.codeBlock.kotlin",
+        "key": "alt+k",
+        "when": "editorTextFocus&& !editorReadonly && editorLangId == markdown"
+      },
+      {
+        "command": "markdown.extension.codeBlock.c#",
+        "key": "ctrl+alt+c",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == markdown"
+      },
+      {
+        "command": "markdown.extension.codeBlock.ruby",
+        "key": "alt+r",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == markdown"
+      },
+      {
+        "command": "markdown.extension.codeBlock.bash",
+        "key": "alt+b",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == markdown"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.67.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "14.x",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "glob": "^8.0.1",
+    "mocha": "^9.2.2",
+    "typescript": "^4.6.4",
+    "@vscode/test-electron": "^2.1.3"
+  }
+}
