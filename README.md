@@ -107,6 +107,7 @@ No more 6 backticks for creating code block in markdown.
 
 ## Link
 
+- [Markdown Code Block In VSCode Markeplace](https://marketplace.visualstudio.com/items?itemName=kkangmj.vscode-markdown-extension)
 - [Keyboard shortcuts for VSCode](https://code.visualstudio.com/docs/getstarted/keybindings)
 - [Syntax highlighting for fenced code blocks](https://markdown-all-in-one.github.io/docs/guide/syntax-highlighting-for-fenced-code-blocks.html#in-editor)
 - [Supported languages of highlight.js](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md)

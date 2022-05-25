@@ -1,8 +1,14 @@
 "use strict";
 
-import { commands, window, Selection } from "vscode";
+import {
+  commands,
+  window,
+  Selection,
+  Position,
+  ExtensionContext,
+} from "vscode";
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: ExtensionContext) {
   context.subscriptions.push(
     commands.registerCommand(
       "markdown.extension.codeBlock.emptyLine",
@@ -144,9 +150,13 @@ function xmlCodeBlock() {
   return codeBlock(fenceWithEmptyLine, newPositionWithEmptyLine, "xml");
 }
 
-function codeBlock(fenceOfCodeBlock, newPositionOfCodeBlock, lang = "") {
+function codeBlock(
+  fenceOfCodeBlock: (lang: string, indentation: string) => string,
+  newPositionOfCodeBlock: (cursor: Position) => Position,
+  lang: string = ""
+) {
   const editor = window.activeTextEditor;
-  if (!editor.selection.isEmpty) {
+  if (editor === undefined || !editor.selection.isEmpty) {
     return;
   }
   const positionOfCursor = editor.selection.active;
@@ -164,19 +174,19 @@ function codeBlock(fenceOfCodeBlock, newPositionOfCodeBlock, lang = "") {
     });
 }
 
-function fenceWithEmptyLine(lang = "", indentation) {
+function fenceWithEmptyLine(lang: string = "", indentation: string) {
   return `\`\`\`${lang}\n${indentation}\n${indentation}\`\`\``;
 }
 
-function fenceWithoutLine(lang = "", indentation) {
+function fenceWithoutLine(lang: string = "", indentation: string) {
   return `\`\`\`${lang}\n${indentation}\`\`\``;
 }
 
-function newPositionWithEmptyLine(newCursor) {
+function newPositionWithEmptyLine(newCursor: Position) {
   return newCursor.with(newCursor.line - 1, newCursor.character);
 }
 
-function newPositionWithoutLine(newCursor) {
+function newPositionWithoutLine(newCursor: Position) {
   return newCursor.with(newCursor.line - 1, newCursor.character + 3);
 }
 
